@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Bootstrap css-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./home.css" />
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <title>Vela Agency</title>
+
+    <style>
+      .top {
+        width: 100%;
+        vertical-align: 50%;
+        color: white;
+      }
+      .marquee:hover {
+        color: orange;
+      }
+
+      .navdesign {
+        font-size: large;
+        font-weight: bolder;
+      }
+    </style>
+
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav1") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav1";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="top">
+      <marquee direction="left" height="45" bgcolor="teal" class="marquee"
+        ><span style="font-size: 30px; font-weight: bold"
+          >Get 10% Discount on First Buy</span
+        ></marquee
+      >
+    </div>
+
+    <div class="topnav1 container" id="myTopnav">
+      <left
+        ><img
+          src="http://drive.google.com/uc?export=view&id=1KNRv2TLbl9KfCZA7jEvOgouDrlEC0X1U"
+          alt="logo"
+          width="47"
+          height="35"
+          loading="lazy"
+          class="d-inline-block align-text-bottom"
+        />
+        <span
+          style="
+            font-size: 35px;
+            font-weight: bold;
+            color: tomato;
+            text-shadow: 2px 2px 3px #2d0592;
+          "
+          >Vela Agency</span
+        ></left
+      >
+      <a href="./contact.html" class="active1">Contact</a>
+      <!-- <a href="./index.html">My Account</a> -->
+      <a href="./about.html">About</a>
+      <div class="dropdown1">
+        <button class="dropbtn">
+          Products
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content1">
+          <a href="./bikes.html">Bike</a>
+          <a href="./cars.html">Car</a>
+          <a href="./tracters.html">Tractor</a>
+          <a href="./trucks.html">Truck</a>
+          <a href="./grease.html">Grease</a>
+          <a href="./specilities.html">Specilities</a>
+        </div>
+      </div>
+
+      <a href="./home.html" class="nav-link active">Home</a>
+      <a
+        href="javascript:void(0);"
+        style="font-size: 15px"
+        class="icon"
+        onclick="myFunction()"
+        >&#9776;</a
+      >
+    </div>
+
+    <!-- contact  -->
+    <div class="title" style="margin-top: 150px">
+      <h2 style="font-size: 3rem; color: teal; " ><center>CONTACT US</center></h2>
+    </div>
+    <section class="ftco-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-6 text-center mb-5"></div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-12">
+            <div class="wrapper">
+              <div class="row no-gutters mb-5">
+                <div class="col-md-7">
+                  <div class="contact-wrap w-100 p-md-5 p-4">
+                    <h3 class="mb-4" style="color: #5e5df0">
+                      FEEL FREE TO CONTACT US
+                    </h3>
+                    <div id="form-message-warning" class="mb-4"></div>
+                    <div
+                      id="form-message-success"
+                      class="mb-4"
+                      style="color: rgb(221, 45, 29)"
+                    >
+                      ---- Contact Form ----
+                    </div>
+                    <form
+                      method=""
+                      id="contactForm"
+                      name="contactForm"
+                      class="contactForm"
+
+                      onsubmit="sendemail()"
+                    >
+                      <script>
+                        function validateForm()
+                        var name=document.contactForm.name.value;
+                        var email=document.contactForm.email.value;
+                        var  subject=document.contactForm.subject.value;
+                        var message=document.contactForm.message.value;
+                        if (name==null || name==""){  
+  alert("Name can't be blank");  
+  return false;  }
+  else if (subject==null || subject==""){  
+  alert("Subject can't be blank");  
+  return false;  }
+  if (message==null || message==""){  
+  alert("Mesaage can't be blank");  
+  return false;  }
+
+                      </script>
+
+
+
+
+
+
+
+
+
+
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label class="label" for="name">Full Name</label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              name="name"
+                              id="name"
+                              required
+                            
+                              placeholder="Name"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label class="label" for="email"
+                              >Email Address</label
+                            >
+                            <input
+                              type="email"
+                              class="form-control"
+                              name="email"
+                              id="email"
+                              required
+                              placeholder="Email"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <label class="label" for="subject">Subject</label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              name="subject"
+                              id="subject"
+                              required
+                              placeholder="Subject"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <label class="label" for="#">Message</label>
+                            <textarea
+                              name="message"
+                              class="form-control"
+                              id="message"
+                              required
+                              cols="30"
+                              rows="4"
+                              placeholder="Message"
+                            ></textarea>
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <div class="form-group"  >
+                            <input
+                            style="background-color:teal; color: white;"
+                              type="submit"
+                              value="Send Message"
+                              class="btn "
+                              onsubmit="return validateform()"
+                            />
+                            <div class="submitting"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="col-md-5 d-flex align-items-stretch">
+                  <div id="map">
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d871.8202952630578!2d77.22953682917242!3d11.492345313707492!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x97794e5ba349b3ae!2zMTHCsDI5JzMyLjQiTiA3N8KwMTMnNDguMyJF!5e1!3m2!1sen!2sin!4v1655224206394!5m2!1sen!2sin"
+                      width="600"
+                      height="450"
+                      style="border: 0"
+                      allowfullscreen=""
+                      loading="lazy"
+                      referrerpolicy="no-referrer-when-downgrade"
+                    ></iframe>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-3">
+                  <div class="dbox w-100 text-center">
+                    <div
+                      class="icon d-flex align-items-center justify-content-center"
+                    >
+                      <span class="fa fa-2x fa-map-marker"></span>
+                    </div>
+                   
+                  </div>
+                </div>
+               
+              </div>
+            
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="foot" >
+      <footer class="footer-distributed foot1">
+        <div class="footer-left">
+  
+          <h3>VELA AGENCY</h3>
+  
+          <p class="footer-links"> <a href="./home.html" class="link-1">Home</a> 
+            <a href="./products.html">Products</a>
+            <a href="./about.html">About</a>
+          
+          </p>
+   <p class="footer-company-name">Vela Agency © 2022</p>
+        </div>
+  
+        <div class="footer-center">
+  
+          <div>
+            <p><span style="font-size: 20px;">34,Mettupalayam Main Road,<span> Sathyamangalam,Erode-638 402. </p> 
+             </div>
+  
+          <div>
+            <p>+91 98659 55199</p>
+          </div>
+  
+          <div>
+            <p><a href="mailto:velaagencymak@gmail.com">velaagencymak@gmail.com</a></p>
+          </div>
+  
+        </div>
+  
+        
+  
+        <div class="footer-right">
+          <p class="footer-company-about ">
+           
+            Increase the life of your vehicle with MAK Lubricants. Check out our different products and select the best one for your ride.
+          </p>
+       
+        </div>
+  
+      </footer>
+  
+  </div>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.0/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+      function sendemail() {
+        emailjs.init("pWPVgANxckC3lmU6L"); //please encrypted user id for malicious attacks
+    //set the parameter as per you template parameter[https://dashboard.emailjs.com/templates]
+      var templateParams = {
+        to_name:"Pradeep",
+        from_name:document.getElementById('name').value,
+        subject: document.getElementById('subject').value,
+        message_html: document.getElementById('message').value,
+        from_email: document.getElementById('email').value,
+      };
+
+    
+      emailjs.send('service_db28rn6', 'template_123m9jd', templateParams)
+        .then(function(response) {
+          console.log('SUCCESS!', response.status, response.text);
+        }, function(error) {
+          console.log('FAILED...', error);
+        });
+        window.alert("Your Mail has been Sent");
+      }
+    </script>
+
+    <!--Bootstrap js-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+      integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+      integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
